@@ -49,7 +49,7 @@ const Appointment = () => {
     const items = steps.map((item) => ({ key: item.title, title: item.title }));
     return (
         <div className={styles.container}>
-            <Steps current={currentStep} items={items} />
+            <Steps data-testid='steps' current={currentStep} items={items} />
             <div>{steps[currentStep].content}</div>
             {currentStep < steps.length - 1 && !isLoading && (
                 <UserDataInput data={userData} nextStep={next} />
